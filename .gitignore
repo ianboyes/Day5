@@ -1,0 +1,22 @@
+# Generated AppLocker policy files (these are created during implementation)
+AppLocker-STIG-v205845-Policy.xml
+Current-AppLocker-Policy.xml
+
+# Compliance reports
+STIG-v205845-Compliance-Report.txt
+*-Compliance-Report.txt
+
+# Group Policy results
+gpresult.html
+*.gpresult
+
+# Temporary files
+*.tmp
+*.temp
+
+# Log files
+*.log
+
+# Backup files
+*.bak
+*.backup
