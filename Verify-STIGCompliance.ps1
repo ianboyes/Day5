@@ -173,7 +173,7 @@ function Test-BrowserDenyRules {
         $browserKeywords = @('browser', 'iexplore', 'msedge', 'chrome', 'firefox', 'opera')
         $browserDenyRules = $adminDenyRules | Where-Object {
             $ruleName = $_.Name.ToLower()
-            $browserKeywords | Where-Object { $ruleName -like "*$_*" }
+            ($browserKeywords | Where-Object { $ruleName -like "*$_*" }).Count -gt 0
         }
         
         if ($browserDenyRules.Count -gt 0) {
@@ -231,7 +231,7 @@ function Test-EmailClientDenyRules {
         $emailKeywords = @('email', 'outlook', 'thunderbird', 'mail')
         $emailDenyRules = $adminDenyRules | Where-Object {
             $ruleName = $_.Name.ToLower()
-            $emailKeywords | Where-Object { $ruleName -like "*$_*" }
+            ($emailKeywords | Where-Object { $ruleName -like "*$_*" }).Count -gt 0
         }
         
         if ($emailDenyRules.Count -gt 0) {
